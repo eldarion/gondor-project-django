@@ -4,3 +4,4 @@
 Django==1.4
 pinax-theme-bootstrap==2.0.4
 pinax-utils==1.0b1.dev3
+gondor==1.1.3
