@@ -32,6 +32,20 @@ directory containing ``project_name`` (the Python package.)
 
 You are now ready to deploy this project to Gondor!
 
+If you use git::
+
+    git init
+    git add .
+    git commit -m "initial project layout"
+    gondor deploy primary master
+
+If you use mercurial::
+
+    hg init
+    hg add .
+    hg commit -m "initial project layout"
+    gondor deploy primary default
+
 .. _virtualenv: http://www.virtualenv.org/
 
 Layout
