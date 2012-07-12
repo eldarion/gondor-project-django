@@ -31,3 +31,22 @@ directory containing ``project_name`` (the Python package.)
 You are now ready to deploy this project to Gondor!
 
 .. _virtualenv: http://www.virtualenv.org/
+
+Layout
+======
+
+The project layout follows the Django 1.4+ layout.
+
+    gondor-project-django/
+        fixtures/
+            initial_data.json (where any data that should be loaded into the database on each deploy)
+        manage.py
+        project_name/ (project's Python package)
+            __init__.py
+            settings.py
+            settings_gondor.py (Django settings for use on Gondor)
+            static/ (see README in directory)
+            templates/ (where templates for your project goes)
+            urls.py
+            wsgi.py (WSGI entry point for Django)
+        requirements.txt (pip file to declare dependencies)
