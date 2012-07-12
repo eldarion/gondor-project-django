@@ -12,6 +12,8 @@ Use the files here to start your own project. To make this project runnable
 you will need to install its dependencies in your environment (ideally you
 create a virtual environment with `virtualenv`_.)
 
+::
+
     pip install -r requirements.txt
 
 Now, you will likely want to customize the naming to better match your
