@@ -27,7 +27,7 @@ every where ``project_name`` appears in the code base. This includes:
  * ``settings.py`` when setting ``ROOT_URLCONF`` and ``WSGI_APPLICATION``
  * ``gondor.yml`` for ``wsgi.entry_point`` and ``env.DJANGO_SETTINGS_MODULE``
 
-When you run initialize your version control system be sure to do this in the
+When you initialize your version control system be sure to do this in the
 directory containing ``project_name`` (the Python package.)
 
 You are now ready to deploy this project to Gondor!
@@ -42,8 +42,10 @@ The project layout follows the Django 1.4+ layout.
 ::
 
     gondor-project-django/
+        .git or .hg (version control metadata)
         fixtures/
             initial_data.json (where any data that should be loaded into the database on each deploy)
+        gondor.yml (Gondor configuration file)
         manage.py
         project_name/ (project's Python package)
             __init__.py
