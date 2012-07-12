@@ -37,6 +37,8 @@ Layout
 
 The project layout follows the Django 1.4+ layout.
 
+::
+
     gondor-project-django/
         fixtures/
             initial_data.json (where any data that should be loaded into the database on each deploy)
