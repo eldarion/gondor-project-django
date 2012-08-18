@@ -15,8 +15,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "dev.db",
+        "ENGINE": "django.db.backends.psycopg2_postgresql",
+        "NAME": "{{ project_name }}",
     }
 }
 
@@ -78,7 +78,7 @@ STATICFILES_FINDERS = [
 ]
 
 # Make this unique, and don"t share it with anybody.
-SECRET_KEY = "xt-sthx-!4=(@q8u3v6c-iwtqy0u94$72_xap+(=ao5_6ab5mp"
+SECRET_KEY = "{{ secret_key }}"
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = [
@@ -95,7 +95,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.tz",
     "django.core.context_processors.request",
     "django.contrib.messages.context_processors.messages",
-    "pinax_utils.context_processors.settings",
+    "{{ project_name }}.context_processors.settings",
 ]
 
 
@@ -107,10 +107,10 @@ MIDDLEWARE_CLASSES = [
     "django.contrib.messages.middleware.MessageMiddleware",
 ]
 
-ROOT_URLCONF = "project_name.urls"
+ROOT_URLCONF = "{{ project_name }}.urls"
 
 # Python dotted path to the WSGI application used by Django"s runserver.
-WSGI_APPLICATION = "project_name.wsgi.application"
+WSGI_APPLICATION = "{{ project_name }}.wsgi.application"
 
 TEMPLATE_DIRS = [
     os.path.join(PACKAGE_ROOT, "templates"),
