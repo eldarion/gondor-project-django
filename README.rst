@@ -17,7 +17,7 @@ this template.
 
 ::
 
-    django-admin.py startproject --template=https://github.com/eldarion/gondor-project-django/zipball/master --extension=py,yml <project_name>
+    django-admin.py startproject --template=https://gondor.io/p/django/ --extension=py,yml <project_name>
     cd <project_name>
 
 To make this project runnable you will need to install its dependencies in
