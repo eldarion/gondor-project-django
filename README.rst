@@ -8,27 +8,24 @@ Gondor. You can use this to start your project that will be hosted on Gondor.
 Usage
 =====
 
-Use the files here to start your own project. To make this project runnable
-you will need to install its dependencies in your environment (ideally you
-create a virtual environment with `virtualenv`_.)
+Create a virtual environment (see `virtualenv`_) and install Django::
+
+    pip install Django==1.4.1
+
+Now you are ready to start your Django project. Use ``startproject`` to get
+this template.
+
+::
+
+    django-admin.py startproject --template=https://github.com/eldarion/gondor-project-django/zipball/master --extension=py,yml <project_name>
+    cd <project_name>
+
+To make this project runnable you will need to install its dependencies in
+your virtual environment.
 
 ::
 
     pip install -r requirements.txt
-
-Now, you will likely want to customize the naming to better match your
-actual project.
-
-``project_name`` is the Python package. You will want to rename this and
-every where ``project_name`` appears in the code base. This includes:
-
- * ``manage.py`` and ``wsgi.py`` when setting ``DJANGO_SETTINGS_MODULE``
-   in ``setdefault``
- * ``settings.py`` when setting ``ROOT_URLCONF`` and ``WSGI_APPLICATION``
- * ``gondor.yml`` for ``wsgi.entry_point`` and ``env.DJANGO_SETTINGS_MODULE``
-
-When you initialize your version control system be sure to do this in the
-directory containing ``project_name`` (the Python package.)
 
 You are now ready to deploy this project to Gondor!
 
@@ -36,14 +33,14 @@ If you use git::
 
     git init
     git add .
-    git commit -m "initial project layout"
+    git commit -m "Initial project layout"
     gondor deploy primary master
 
 If you use mercurial::
 
     hg init
     hg add .
-    hg commit -m "initial project layout"
+    hg commit -m "Initial project layout"
     gondor deploy primary default
 
 .. _virtualenv: http://www.virtualenv.org/
