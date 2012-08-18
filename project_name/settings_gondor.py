@@ -1,26 +1,15 @@
 import os
-import urlparse
+
+import dj_database_url
 
 from .settings import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-if "GONDOR_DATABASE_URL" in os.environ:
-    urlparse.uses_netloc.append("postgres")
-    url = urlparse.urlparse(os.environ["GONDOR_DATABASE_URL"])
-    DATABASES = {
-        "default": {
-            "ENGINE": {
-                "postgres": "django.db.backends.postgresql_psycopg2"
-            }[url.scheme],
-            "NAME": url.path[1:],
-            "USER": url.username,
-            "PASSWORD": url.password,
-            "HOST": url.hostname,
-            "PORT": url.port
-        }
-    }
+DATABASES = {
+    "default": dj_database_url.config(env="GONDOR_DATABASE_URL"),
+}
 
 SITE_ID = 1 # set this to match your Sites setup
 
