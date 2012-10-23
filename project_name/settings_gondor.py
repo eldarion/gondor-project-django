@@ -37,11 +37,11 @@ LOGGING = {
             "formatter": "simple"
         }
     },
+    "root": {
+        "handlers": ["console"],
+        "level": "INFO",
+    },
     "loggers": {
-        "": {
-            "handlers": ["console"],
-            "level": "INFO",
-        },
         "django.request": {
             "propagate": True,
         },
