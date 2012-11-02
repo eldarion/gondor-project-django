@@ -1,5 +1,5 @@
 Django==1.4.2
-pinax-theme-bootstrap==2.0.4
+pinax-theme-bootstrap==2.2.1
 gondor==1.1.5
 gunicorn==0.15.0
 psycopg2==2.4.5
