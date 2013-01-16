@@ -4,8 +4,8 @@ key: <site_key>
 # Version control system used locally for your project.
 vcs: <vcs>
 
-# Framework to use on Gondor.
-framework: wsgi
+# Python version to run on Gondor.
+runtime: python-2.7.3
 
 # This path is relative to your project root (the directory gondor.yml lives in.)
 requirements_file: requirements.txt
