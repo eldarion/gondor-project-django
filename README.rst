@@ -10,7 +10,7 @@ Usage
 
 Create a virtual environment (see `virtualenv`_) and install Django::
 
-    pip install Django==1.4.2
+    pip install Django==1.4.3
 
 Now you are ready to start your Django project. Use ``startproject`` to get
 this template.
