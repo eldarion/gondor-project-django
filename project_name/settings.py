@@ -146,19 +146,39 @@ LOGGING = {
             "()": "django.utils.log.RequireDebugFalse"
         }
     },
+    "formatters": {
+        "simple": {
+            "format": "%(levelname)s %(message)s"
+        }
+    },
     "handlers": {
+        "console": {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
+            "formatter": "simple"
+        },
         "mail_admins": {
             "level": "ERROR",
             "filters": ["require_debug_false"],
             "class": "django.utils.log.AdminEmailHandler"
         }
     },
+    "root": {
+        "handlers": ["console"],
+        "level": "INFO",
+    },
     "loggers": {
+        "gunicorn": {
+            "propagate": True,
+        },
+        "django": {
+            "propagate": True,
+        },
         "django.request": {
             "handlers": ["mail_admins"],
             "level": "ERROR",
             "propagate": True,
-        },
+        }
     }
 }
 
