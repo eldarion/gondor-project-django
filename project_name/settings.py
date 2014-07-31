@@ -123,13 +123,12 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    
+
     # theme
     "pinax_theme_bootstrap",
-    
+
     # external
-    "django_forms_bootstrap",
-    
+
     # project
 ]
 
